@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+
+    <title>
+        Nvidia
+    </title>
+
+    <script>
+        var open = false
+        function opensidemenu(){
+           if (open){
+              document.getElementById("nav-links").style.transform="translate(100%)"
+              open = false
+           }
+           else{
+              document.getElementById("nav-links").style.transform="translate(0)"
+              open = true
+           }
+        }
+     </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header class="flexhead">
+            <figure>
+                <img src="./images/logo.png" alt="Logo Nvidia">
+            </figure>
+            <nav>
+                <ul id="nav-links">
+                    <li>
+                        <a href="">
+                            PRODUITS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            GAMME RTX
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            SUPPORT & PILOTES
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            CONTACT
+                        </a>
+                    </li>
+                </ul>
+                <div class="burger_menu" onclick="opensidemenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                      </svg>                      
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <img id="crop" src="./images/rtx2060.jpg" alt="Nvidia RTX 2060">
+            <div class="overlay">
+                <h2>
+                    Plus d'information sur la gamme GeForce RTX
+                </h2>
+                <button class="button">
+                    Découvrir
+                </button>
+            </div>
+        </div>
+        <div class="flex" id="border">
+            <article>
+                    <div class="flex">
+                        <figure>
+                            <img src="./images/nvidia.svg" alt="Logo Nvidia">
+                        </figure>
+                        <h3>
+                            LA PUISSANCE, TOUT SIMPLEMENT.
+                        </h3>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi? Adipisci cupiditate nam beatae non vitae quae. 
+                        Saepe a earum laborum maiores modi repudiandae, optio debitis aut veritatis officiis ad.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi? Adipisci cupiditate nam beatae non vitae quae. 
+                        Saepe a earum laborum maiores modi repudiandae, optio debitis aut veritatis officiis ad.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi? Adipisci cupiditate nam beatae non vitae quae. 
+                        Saepe a earum laborum maiores modi repudiandae, optio debitis aut veritatis officiis ad.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi? Adipisci cupiditate nam beatae non vitae quae. 
+                        Saepe a earum laborum maiores modi repudiandae, optio debitis aut veritatis officiis ad.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi? Adipisci cupiditate nam beatae non vitae quae. 
+                        Saepe a earum laborum maiores modi repudiandae, optio debitis aut veritatis officiis ad.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi? Adipisci cupiditate nam beatae non vitae quae. 
+                        Saepe a earum laborum maiores modi repudiandae, optio debitis aut veritatis officiis ad.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, animi? Adipisci cupiditate nam beatae non vitae quae. 
+                        Saepe a earum laborum maiores modi repudiandae, optio debitis aut veritatis officiis ad.
+                    </p>
+            </article>
+            <aside class="green">
+                    <h1>
+                        A PROPOS
+                    </h1>
+                    <figure>
+                        <img src="./images/logoblck.png" alt="Logo Nvidia">
+                    </figure>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus similique, sint labore earum ut incidunt necessitatibus impedit? Veniam laboriosam fuga odio debitis. Harum eos ullam vero tempora saepe esse error?
+                    </p>
+                    <div class="flexsocial">
+                        <figure>
+                            <a href="#">
+                                <img src="./images/facebook.svg" alt="Facebook logo">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="#">
+                                <img src="./images/twitter.svg" alt="Twitter logo">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="#">
+                                <img src="./images/instagram.svg" alt="instagram logo">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="#">
+                                <img src="./images/snapchat.svg" alt="Snapchat logo">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="#">
+                                <img src="./images/linkedin.svg" alt="Linkedin logo">
+                            </a>
+                        </figure>
+                    </div>
+            </aside>
+        </div>
+        <div class="triangle"></div>
+        <footer class="flexfooter">
+                <div id="newsletter">
+                    <h4>
+                        NEWSLETTER
+                    </h4>
+                    <form>
+                        <input type="text" id="name" placeholder="Nom">
+                    </form>
+                    <div class="flexfooter">
+                        <form>
+                            <input type="email" id="mail" placeholder="Email">
+                        </form>
+                        <button>
+                            S'inscrire
+                        </button>
+                    </div>
+                </div>
+                <div class="marg">
+                    <h5>
+                        GALERIE
+                    </h5>
+                    <div class="flexgaleri">
+                        <figure>
+                            <a>
+                                <img src="./images/galeri1.jpg" alt="Image galeri 1 nvidia">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a>
+                                <img src="./images/galeri2.jpg" alt="Image galeri 2 nvidia">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a>
+                                <img src="./images/galeri3.jpg" alt="Image galeri 3 nvidia">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a>
+                                <img src="./images/galeri4.jpg" alt="Image galeri 4 nvidia">
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <div class="marg">
+                    <h6>
+                        PARTENAIRES
+                    </h6>
+                    <div class="flexgaleri">
+                        <figure>
+                            <a href="#">
+                                <img src="./images/partenaire1.png" alt="Image partenaire 1 nvidia">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="#">
+                                <img src="./images/partenaire2.png" alt="Image partenaire 2 nvidia">
+                            </a>
+                        </figure>
+                        <figure>
+                            <a href="#">
+                                <img src="./images/partenaire3.png" alt="Image partenaire 3 nvidia">
+                            </a>
+                        </figure>
+                     </div>
+                </div>
+        </footer>
+    </div>
+</body>
+</html>
