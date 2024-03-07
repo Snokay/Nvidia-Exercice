@@ -133,8 +133,8 @@ function startGame(){
 
 function makeMoove(row, col){
     if(board[row][col] === '' && gameStatus == null){
+
         board[row][col] = currentPlayerPlace;
-        board[row][col].classList.add(currentPlayer)
 
         displayBoard();
 
@@ -158,27 +158,43 @@ function makeMoove(row, col){
 }
 
 function checkWin(player){
+    let win = false;
+
+    // Check rows
     for(let row = 0; row < 3; row++){
         if(board[row][0] === player && board[row][1] === player && board[row][2] === player){
-            return true;
+            win = true;
+            for(let col = 0; col < 3; col++){
+                document.querySelector(`#board > div:nth-child(${row * 3 + col + 1})`).classList.add('win-cell');
+            }
         }
     }
 
+    // Check columns
     for(let col = 0; col < 3; col++){
         if(board[0][col] === player && board[1][col] === player && board[2][col] === player){
-            return true;
+            win = true;
+            for(let row = 0; row < 3; row++){
+                document.querySelector(`#board > div:nth-child(${row * 3 + col + 1})`).classList.add('win-cell');
+            }
         }
     }
 
+    // Check diagonals
     if(board[0][0] === player && board[1][1] === player && board[2][2] === player){
-        return true;
+        win = true;
+        for(let i = 0; i < 3; i++){
+            document.querySelector(`#board > div:nth-child(${i * 3 + i + 1})`).classList.add('win-cell');
+        }
     }
-
     if(board[0][2] === player && board[1][1] === player && board[2][0] === player){
-        return true;
+        win = true;
+        for(let i = 0; i < 3; i++){
+            document.querySelector(`#board > div:nth-child(${(2 - i) * 3 + i + 1})`).classList.add('win-cell');
+        }
     }
 
-    return false;
+    return win;
 }
 
 function checkDraw(){
@@ -201,6 +217,7 @@ function displayBoard(){
             const cell = document.createElement('div');
             cell.classList = "cell";
             cell.textContent = board[row][col];
+
 
             cell.addEventListener("click", function(){
                 makeMoove(row, col);
@@ -244,7 +261,6 @@ function clearBoard(){
         });
     }
 
-    document.getElementById("board").innerHTML = ""
     document.getElementById("playerPlay").innerHTML = ""
 }
 
@@ -262,13 +278,13 @@ function resetGame(){
 }
 
 //Function showReaction is for make box have some color when you win, loose, or when you interact with one already check
-function showReaction(){
-    if (board.classList.contains(currentPlayer)){
-        elements = document.getElementsByClassName(currentPlayer);
-        for (var i = 0; i < elements.length; i++) {
-            elements[i].style.backgroundColor="green";
-        }
-    }
-}
+// function showReaction(){
+//     if (board.contains(currentPlayer)){
+//         elements = document.getElementsByClassName(currentPlayer);
+//         for (var i = 0; i < elements.length; i++) {
+//             elements[i].style.backgroundColor="green";
+//         }
+//     }
+// }
 
 startGame();
